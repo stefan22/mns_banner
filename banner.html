@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>The Sale.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<style>
+  body{color:#fff;font-family:mns-london,Helvetica,Arial,sans-serif;font-size:1.5rem;font-weight:600;display:flex;justify-content:center;align-items:center;height:100vh}#demo{overflow:hidden;position:relative;width:800px;height:390px;border:1px solid transparent;border-radius:3px;box-shadow:0 1px 1px 0 rgb(243 119 119 / 14%),0 2px 1px -1px rgb(249 46 46 / 12%),0 1px 3px 0 rgb(239 205 205 / 20%)}#thesale{position:absolute;left:-18px}#heading{position:absolute;top:125px;left:24px}#circles{position:absolute;top:230px;left:20px}#circles img{width:146px}#mns{position:absolute;top:-27px;right:0;right:-5px}
+</style>
+</head>
+<body>
+  <div id="demo"> <img id="thesale" src="https://i.postimg.cc/5yXzDJQr/thesalered.png" alt=""/> <img id="mns" src="https://i.postimg.cc/9f2G0ss4/store-white.png" alt=""/> <div id="circles"> <img src='https://i.postimg.cc/mgCYbTpf/circle1.png'> <img src='https://i.postimg.cc/8CbL6tVZ/circle2.png'> <img src='https://i.postimg.cc/C1LkHkhS/circle3.png'> <img src='https://i.postimg.cc/8cxvSYhz/circle4.png'> <img src='https://i.postimg.cc/RFsfPhhf/circle5.png'> </div><div id="heading"> <p id="reductions">Further reductions - up to 70% off</p><p id="shop-sale">Shop the sale <img id="right-arrow" src="https://i.postimg.cc/7YCcnTh3/rightarrow.png"/></p></div></div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js">
+</script>
+<script>
+const tl=gsap.timeline({repeat:-1});tl.to("#demo",{duration:1,opacity:1.5,backgroundColor:"#e30613",borderColor:"#d60714"}).from("#thesale",{x:300,duration:0.5,opacity:0}).from("#heading",{opacity:0,duration:1,scale:0,ease:"back"}).from("#right-arrow",{duration:1,x:-900,opacity:0,scale:1}).from("#circles img",{y:160,stagger:0.2,duration:0.8,ease:"back"}).from("#mns",{xPercent:100,duration:0.5}).to("#demo",{delay:1,duration:1,opacity:0,scale:1});
+</script>
+
+</body>
+</html>
