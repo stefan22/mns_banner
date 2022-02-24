@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Sale.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <style>
+      body {
+        color: #fff;
+        font-family: mns-london, Helvetica, Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #demo {
+        overflow: hidden;
+        position: relative;
+        width: 800px;
+        height: 390px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px 0 rgb(243 119 119 / 14%),
+          0 2px 1px -1px rgb(249 46 46 / 12%),
+          0 1px 3px 0 rgb(239 205 205 / 20%);
+      }
+      #thesale {
+        position: absolute;
+        left: -18px;
+      }
+      #heading {
+        position: absolute;
+        top: 125px;
+        left: 24px;
+      }
+      #circles {
+        position: absolute;
+        top: 230px;
+        left: 20px;
+      }
+      #circles img {
+        width: 146px;
+      }
+      #mns {
+        position: absolute;
+        top: -27px;
+        right: 0;
+        right: -5px;
+      }
+      #right-arrow {
+        fill: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <img
+        id="thesale"
+        src="https://i.postimg.cc/5yXzDJQr/thesalered.png"
+        alt=""
+      />
+      <img
+        id="mns"
+        src="https://i.postimg.cc/9f2G0ss4/store-white.png"
+        alt=""
+      />
+      <div id="circles">
+        <img src="https://i.postimg.cc/mgCYbTpf/circle1.png" />
+        <img src="https://i.postimg.cc/8CbL6tVZ/circle2.png" />
+        <img src="https://i.postimg.cc/C1LkHkhS/circle3.png" />
+        <img src="https://i.postimg.cc/8cxvSYhz/circle4.png" />
+        <img src="https://i.postimg.cc/RFsfPhhf/circle5.png" />
+      </div>
+      <div id="heading">
+        <p id="reductions">Further reductions - up to 70% off</p>
+        <p id="shop-sale">
+          Shop the sale
+          <svg id="right-arrow" fill="white" width="27" height="14" 
+            stroke="white"
+            xmlns="http://www.w3.org/2000/svg">
+            <path 
+            d="M17.86 6.67L11.43.15a.52.52 0 00-.71 0 .47.47 0 000 .68l5.64 5.71H.5A.48.48 0 000 7a.49.49 0 00.5.48h15.84l-5.64 5.71a.47.47 0 000 .68c.2.187.51.187.71 0l6.43-6.52a.45.45 0 00.02-.68z"/>
+          </svg>
+
+         
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js"></script>
+    <script>
+      const tl = gsap.timeline({
+        repeat: -1
+      })
+      tl.to(
+        '#demo',
+        {
+          delay: 0.1,
+          scale: 1,
+          perspective: 0,
+          duration: 1.75,
+          borderRadius: 0,
+          opacity: 1,
+          backgroundColor: '#e30613',
+          ease: 'linear'
+        }, '-=1'
+      )
+      
+        .from(
+          '#thesale',
+          {
+            x: 220,
+            duration: 1.35,
+            transformOrigin: '50% 50%',
+            scaleX: 0,
+            opacity: 0.35,
+            rotateX: -180,
+            ease: 'force3.out'
+          },
+          '-=1'
+        )
+        .from('#heading', {
+          opacity: 0.25,
+          duration: 1,
+          scale: 0,
+          ease: 'back'
+        })
+        .from(
+          '#right-arrow',
+          {
+            rotate: -360,
+            duration: 1.25,
+            x: -200,
+            opacity: 0,
+            ease: 'back',
+            scale: 0
+          },
+          '+=.25'
+        )
+        .from('#circles img', {
+          y: 310,
+          stagger: 0.2,
+          duration: 1,
+          ease: 'back'
+        }, '+=.2')
+      
+        .from('#mns', {
+          x: 130,  
+          boxShadow: '0 2px 2px 0 rgb(255 57 15), 0 3px 1px -2px rgb(255 255 255 / 12%), 0 1px 5px 0 rgb(247 5 5 / 20%)',
+          opacity: 0,
+          duration: 0.6,
+          ease: 'back'
+        })
+        .to('#circles img', {
+          delay: 0.35,
+          duration: 2,
+          stagger: -0.3,
+          scale: 0.05,
+          perspective: 400,
+          opacity: 0,
+          ease: 'expo.out',
+          mixBlendMode: 'lighten',
+          transformOrigin: '48% 47%'
+        })
+        .to(
+          '#heading',
+          {
+            opacity: 0,
+            perspective: 400,
+            duration: 1.5,
+            scale: 0.15,
+            transformOrigin: '50% 50%'
+          },
+          '+=  1'
+        )
+        .to('#demo', {
+          opacity: 1,
+          duration: 1.95,
+          boxShadow: '0 2px 2px 0 rgb(255 57 15), 0 3px 1px -2px rgb(255 255 255 / 12%), 0 1px 5px 0 rgb(247 5 5 / 20%)',
+          perspective: 1200,
+          transformOrigin: '50% 50%',
+          rotateY: -360,
+          backgroundColor: '#e30613',
+          ease: 'expo2.inOut'
+        }, '+=.3')
+        
+        .to('#demo', {
+          opacity: 0,
+          scaleX: 1,
+          duration: 1,
+          boxShadow: 'none',
+          perspective: 0,
+          backgroundColor: 'transparent',
+          borderColor: 'none',
+          ease: 'linear',
+        })
+        
+    </script>
+  </body>
+</html>
