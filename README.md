@@ -1,4 +1,8 @@
-<h2>Not MnS_banner</h2> 
+ [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https:/github.com/stefan22/progressive-weather-app.git) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/stefan22/progressive-weather-app?color=red&style=flat-square)
+ 
+ <br />
+
+<h2 align="center">Not MnS_banner</h2> 
 
 
 <br />
