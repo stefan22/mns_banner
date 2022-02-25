@@ -22,7 +22,8 @@ are all loaded one at at a time/ and repeat
 
 
   ```js
-⬇️   Download html file and open it in the browser.  Static dependencies either inline or stored and fetched off a CDN.
+⬇️  Download single html file & open it in the browser (Added GH-pg link below).  
+ 🥯  Static dependencies either inline, or stored and fetched off a CDN.
   ```
 
 <br />
