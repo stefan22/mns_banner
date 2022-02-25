@@ -1,4 +1,6 @@
- [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https:/github.com/stefan22/progressive-weather-app.git) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/stefan22/progressive-weather-app?color=red&style=flat-square)
+ [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https:/github.com/stefan22/mns_banner.git) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/stefan22/mns_banner?color=red&style=flat-square)
+ 
+
  
  <br />
 
